@@ -6,30 +6,32 @@
   <title>Encriptador</title>
   <link rel="stylesheet" href="./Css/normalize.css">
   <link rel="stylesheet" href="./Css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <main>
-    <section class="container-left">
-      <img src="" alt="" class="logo">
+  <main class="main">
+    <section class="section-left">
+      <img src="./Assets/Logo.svg" alt="" class="section-left__logo logo">
       //Espacio para ingresar texto a Encriptador
-      <div class="encrypt-decrypt">
-        <figure class="check">
-          <img src="" alt="">
+      <div class="section-left__encrypt encrypt">
+        <figure class="encrypt__info">
+          <img src="./Assets/Icon.svg" alt="icon"> 
           <p>Solo letras minúsculas y sin acentos</p>
         </figure>
         <div>
-          <button class="btn-primary">Encriptar</button>
-          <button class="btn-secondary">Desencriptar</button>
+          <button class="button encrypt--button">Encriptar</button>
+          <button class="button encrypt--button-secondary">Desencriptar</button>
         </div>
       </div>
     </section>
-    <section class="container-right">
-      <img src="" alt="" class="image-descrip">
+    <section class="section-right">
+      <img src="./Assets/Figura.svg" alt="Hombre con Lupa">
       <h2>Ningún mensaje fue encontrado</h2>
       <p>Ingrese el texto que desees encriptar o desencriptar</p>
+      <button class="button section-right--button">Copiar</button>
     </section>
   </main>
-
 </body>
 </html>
