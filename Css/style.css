@@ -1,7 +1,6 @@
 html {
   font-family: "Inter", sans-serif;
 }
-
 :root {
   --primary-color: #0A3871;
   --secondary-color: #D8DFE8;
@@ -13,40 +12,82 @@ html {
 .main {
   width: 100%;
   height: 100vh;
-  background: lightcyan;
-  padding: 3.5rem ;
+  background: var(--background-color);
+  padding: 3.5rem 3.5rem 3.5rem 0 ;
   display: flex;
   align-items: center;
 }
-
 .section-left {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
+  width: 75%;
+  text-align: center;
 }
-
 .section-left__logo {
-  height: 4.8rem;
+  height: 3rem;
+  position: relative;
+  top: -2.5rem;
+  left: -42%;
 }
-
+.section-left__example {
+  width: 75%;
+  height: 70vh;
+  margin: 0 auto;
+  font-size: 2.5rem;
+  text-align: start;
+  color: var(--primary-color);
+}
+.section-left__encrypt {
+  display: inline-block;
+}
+.encrypt__info {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.encrypt__info img {
+  height: 1rem;
+  margin: 0 0.5rem;
+}
+.encrypt__info p {
+  font-size: 1.2rem;
+  color: var(--gray400);
+}
+.button {
+  width: 25rem;
+  height: 4.5rem;
+  border: var(--primary-color) solid 0.1rem;
+  border-radius: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 0 0.5rem;
+}
+.encrypt--button {
+  background-color: var(--primary-color);
+  color: white;
+}
 .section-right {
-  width: 30%;
+  width: 25%;
   background: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;  
+  text-align: center;
   height: 100%;
   border-radius: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
 }
-
+.section-right img {
+  width: 90%;
+  padding: 1rem;
+  margin: 0 auto;
+}
 .section-right h2 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: var(--gray500);
+  margin-top: 1rem;
+  padding: 1rem;
 }
-
 .section-right p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--gray400);
+  padding: 1rem;
 }
