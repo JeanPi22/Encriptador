@@ -11,10 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <main class="main">
+
+    <!-- Sección para ingresar texto, encriptar y desencriptar -->
     <section class="section-left">
-      <img src="./Assets/Logo.svg" alt="" class="section-left__logo logo">      
-      <p class="section-left__example">Ingrese el texto aquí</p> <!-- Espacio para ingresar texto a Encriptador -->
+      <img src="./Assets/Logo.svg" alt="Logo" class="section-left__logo logo">  
+      <!-- Espacio para ingresar texto a Encriptar -->    
+      <textarea class="section-left__textarea" placeholder="Ingrese texto aquí"></textarea> 
       <div class="section-left__encrypt encrypt">
         <figure class="encrypt__info">
           <img src="./Assets/Icon.svg" alt="icon"> 
@@ -26,12 +30,30 @@
         </div>
       </div>
     </section>
+
+    <!-- Sección donde muestra y copiar mensaje -->
     <section class="section-right">
-      <img src="./Assets/Figura.svg" alt="Hombre con Lupa">
-      <h2>Ningún mensaje fue encontrado</h2>
-      <p>Ingrese el texto que desees encriptar o desencriptar</p>
-      <!-- <button class="button section-right--button">Copiar</button> -->
+      <!-- Se muestra imagen y mensaje de que no hay texto -->
+      <div id="imageText" class="section-right__imageText" style="display: none;">
+        <img src="./Assets/Figura.svg" alt="Hombre con Lupa">
+        <h2>Ningún mensaje fue encontrado</h2>
+        <p>Ingrese el texto que desees encriptar o desencriptar</p>
+      </div>
+      <!-- Se muestra el texto encriptado y copiar -->
+      <div id="text-copy" class="section-right__text-copy">
+        <textarea class="section-right__textarea" placeholder="Ingrese texto aquí" ></textarea> 
+        <!-- readonly -->
+        <button class="button section-right--button">Copiar</button>        
+      </div>      
     </section>
+
   </main>
+
+  <footer class="footer">
+    <p>&copy Copyright PierreDev - 2024</p>
+  </footer>
+
+  <script src="./index.js"></script>
+
 </body>
 </html>
