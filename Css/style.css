@@ -34,29 +34,34 @@ html {
 .section-left {
   width: 75%;
   height: 100%;
+  padding: 2.5rem;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .section-left__logo {
   height: 3rem;
   position: absolute;
-  top: 3.5rem;
+  top: 1rem;
   left: 4rem;
 }
 .section-left__textarea {
   width: 70%;
-  height: 65%;
+  height: 70%;
   background: none;
   font-size: 2.5rem;
-  margin: 5rem 0;
+  margin-top: 5rem;
   border: none;
   outline: none; 
   resize: none;
 }
 .section-left__textarea::placeholder {
   color: var(--primary-color);
+}
+.section-left__encrypt {
+  position: absolute;
+  bottom: 2.5rem;
 }
 .encrypt__info {
   display: flex;
@@ -86,9 +91,7 @@ html {
   height: 100%;
   padding: 2.5rem;
   background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  
+  align-content: center;
   text-align: center;
   border-radius: 3rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
@@ -111,25 +114,23 @@ html {
   padding: 1rem;
 }
 .section-right__text-copy {
-  display: block;
-  /* width: 100%; */
-  height: 85%;
-  /* margin: 0 auto; */
-  /* padding: 0.5rem; */
+  height: 100%;
+  position: relative;
 }
 .section-right__textarea {
   width: 100%;
-  height: 100%;
-  font-size: 1.5rem;
-  /* margin-bottom: 4rem; */
-  /* border: none; */
+  height: 88%;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+  border: none;
   outline: none; 
   resize: none;
 }
 .section-right--button {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 12.5%;
   width: 75%;
-  top: 10%;
 }
 .section-right--button:hover {
   background-color: var(--secondary-color);
