@@ -17,15 +17,15 @@
     <section class="section-left">
       <img src="./Assets/Logo.svg" alt="Logo" class="section-left__logo logo">  
       <!-- Espacio para ingresar texto a Encriptar -->    
-      <textarea class="section-left__textarea" placeholder="Ingrese texto aquí"></textarea> 
+      <textarea id="text-encrypt" class="section-left__textarea" placeholder="Ingrese texto aquí"></textarea> 
       <div class="section-left__encrypt encrypt">
         <figure class="encrypt__info">
           <img src="./Assets/Icon.svg" alt="icon"> 
           <p>Solo letras minúsculas y sin acentos</p>
         </figure>
         <div>
-          <button class="button encrypt--button">Encriptar</button>
-          <button class="button encrypt--button-secondary">Desencriptar</button>
+          <button class="button encrypt--button" onclick="encrypt()">Encriptar</button>
+          <button class="button encrypt--button-secondary" onclick="decrypt()">Desencriptar</button>
         </div>
       </div>
     </section>
@@ -39,10 +39,10 @@
         <p>Ingrese el texto que desees encriptar o desencriptar</p>
       </div>
       <!-- Se muestra el texto encriptado y copiar -->
-      <div id="text-copy" class="section-right__text-copy">
-        <textarea class="section-right__textarea" placeholder="Ingrese texto aquí" readonly></textarea>        
+      <div class="section-right__text-copy">
+        <textarea id="text-copy" class="section-right__textarea" placeholder="Ingrese texto aquí" readonly></textarea>        
         <!-- El atributo readonly: Este atributo especifica que el contenido del área de texto no puede ser modificado por el usuario. -->
-        <button class="button section-right--button">Copiar</button>        
+        <button class="button section-right--button" onclick="textCopy()">Copiar</button>        
       </div>      
     </section>
   </main>
