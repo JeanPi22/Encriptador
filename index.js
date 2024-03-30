@@ -38,6 +38,39 @@ function encrypt() {
 
 function decrypt() {
 
+  const keysDictionary = {
+    "ai": "a",
+    "enter": "e",
+    "imes": "i",
+    "ober": "o",
+    "ufat": "u"
+  };
+
+  // Capturar el texto del <textarea>
+  let textAreaEncrypt = document.getElementById("text-encrypt").value;
+  let textDecrypt = ""; //Variable para almacenar el texto que se desencripta  
+
+  let i = 0;
+  while (i < textAreaEncrypt.length) {
+    let equal = false;
+    //Cuando se encuentra una coincidencia, "equal" se cambia a "true", lo que nos indica que se ha encontrado una coincidencia y que no es necesario continuar buscando.
+    for (let key in keysDictionary) {
+      //Se busca coincidencias
+      if (textAreaEncrypt.substring(i, i + key.length) === key) {
+        textDecrypt += keysDictionary[key];
+        i += key.length;
+        equal = true;
+        break;
+      }      
+    }
+    if (!equal) {
+      textDecrypt += textAreaEncrypt[i];
+      i++;
+    }
+  }
+
+  //Se muestra el texto desencriptado en el <textarea> del panel derecho.
+  document.getElementById("text-copy").value = textDecrypt;
 }
 
 function textCopy() {
