@@ -5,9 +5,13 @@ html {
 :root {
   --primary-color: #EE8600;
   --secondary-color: #FDECCB;
-  --background-color: #F3F5FC;
+  --background-color: #f4f5fa;
   --gray500: #343A40;
   --gray400: #495057;
+}
+
+body {
+  width: 100%;
 }
 
 .button {
@@ -16,16 +20,16 @@ html {
   border: var(--primary-color) solid 0.1rem;
   border-radius: 1.5rem;
   font-size: 1.5rem;
+  background-color: white;
   color: var(--primary-color);
   margin: 0 0.5rem;
   cursor: pointer;
 }
 
 .main {
-  width: 100%;
+  width: 100vw;
   height: 95vh;
   background-color: var(--background-color);
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 11px ), repeating-linear-gradient( #dbe2e916, #dbe2e9ec );
   padding: 3.5rem 3.5rem 3.5rem 0 ;
   display: flex;
   align-items: center;
@@ -145,7 +149,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 5vh;
   background: var(--primary-color);
   font-size: 1.5rem;
