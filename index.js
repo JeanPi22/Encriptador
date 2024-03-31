@@ -10,6 +10,8 @@ function encrypt() {
   // Capturar el texto del <textarea>
   let textAreaEncrypt = document.getElementById("text-encrypt").value;
   let textEncrypt = ""; //Variable para almacenar el texto que se encripta
+  
+  textAreaEncrypt = textAreaEncrypt.toLowerCase();  
 
   for (let i = 0; i < textAreaEncrypt.length; i++) {
     switch (textAreaEncrypt[i]) {
@@ -34,10 +36,11 @@ function encrypt() {
   }
   //Se muestra el texto encriptado en el <textarea> del panel derecho.
   document.getElementById("text-copy").value = textEncrypt;
+  document.getElementById("text-encrypt").value = "";
+  
 }
 
 function decrypt() {
-
   const keysDictionary = {
     "ai": "a",
     "enter": "e",
@@ -70,7 +73,24 @@ function decrypt() {
   }
 
   //Se muestra el texto desencriptado en el <textarea> del panel derecho.
-  document.getElementById("text-copy").value = textDecrypt;
+  document.getElementById("text-copy").value = textDecrypt;  
+  document.getElementById("text-encrypt").value = "";
+}
+
+function textImage() {
+  const image = document.getElementById("imageText");
+  const textEncrypt = document.getElementById("text-encrypt");
+  const textCopy = document.getElementById("txtcopy");
+
+  // Verifica si el contenido del <textarea> "text-encrypt" está vacío.
+  // Y cambia el estado de los <display>
+  if (textEncrypt.value.trim() === "") {
+    image.style.display = "block";
+    textCopy.style.display = "none";
+  } else {
+    image.style.display = "none";
+    textCopy.style.display = "block";
+  }
 }
 
 function textCopy() {
@@ -79,7 +99,7 @@ function textCopy() {
   // Escribir el texto en el portapapeles
   navigator.clipboard.writeText(textAreaCopy)
   .then(() => {
-    alert("Texto copiado: " + textAreaCopy);
+    console.log("Texto copiado: " + textAreaCopy);
   })
   .catch(err => {
     console.error("Error al copiar texto ", err);

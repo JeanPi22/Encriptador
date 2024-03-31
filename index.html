@@ -13,11 +13,12 @@
 <body>
 
   <main class="main">
+
     <!-- Sección para ingresar texto, encriptar y desencriptar -->
     <section class="section-left">
-      <img src="./Assets/Logo.svg" alt="Logo" class="section-left__logo logo">  
+      <img src="./Assets/logoPrincipal.svg" alt="Logo" class="section-left__logo logo">  
       <!-- Espacio para ingresar texto a Encriptar -->    
-      <textarea id="text-encrypt" class="section-left__textarea" placeholder="Ingrese texto aquí"></textarea> 
+      <textarea id="text-encrypt" class="section-left__textarea" placeholder="Ingrese texto aquí" oninput="textImage()"></textarea> 
       <div class="section-left__encrypt encrypt">
         <figure class="encrypt__info">
           <img src="./Assets/Icon.svg" alt="icon"> 
@@ -32,15 +33,15 @@
 
     <!-- Sección donde muestra y copiar mensaje -->
     <section class="section-right">
-      <!-- Se muestra imagen y mensaje de que no hay texto -->
-      <div id="imageText" class="section-right__imageText" style="display: none;">
+      <!-- Se muestra imagen y mensaje de que no hay texto // style="display: none;-->
+      <div id="imageText" class="section-right__imageText" ">
         <img src="./Assets/Figura.svg" alt="Hombre con Lupa">
         <h2>Ningún mensaje fue encontrado</h2>
         <p>Ingrese el texto que desees encriptar o desencriptar</p>
       </div>
       <!-- Se muestra el texto encriptado y copiar -->
-      <div class="section-right__text-copy">
-        <textarea id="text-copy" class="section-right__textarea" placeholder="Ingrese texto aquí" readonly></textarea>        
+      <div id="txtcopy" class="section-right__text-copy">
+        <textarea id="text-copy" class="section-right__textarea" readonly></textarea>        
         <!-- El atributo readonly: Este atributo especifica que el contenido del área de texto no puede ser modificado por el usuario. -->
         <button class="button section-right--button" onclick="textCopy()">Copiar</button>        
       </div>      
@@ -49,6 +50,14 @@
 
   <footer class="footer">
     <p>&copy Copyright PierreDev - 2024</p>
+    <div class="footer--iconSocial">
+      <img src="./Assets/github-mark-white.svg">
+      <a href="https://github.com/JeanPi22/Encriptador" alt="repositorio" target="_blank">GitHub</a>
+    </div> 
+    <div class="footer--iconSocial">
+      <img src="./Assets/linkedIn.svg">
+      <a href="https://www.linkedin.com/in/jean-pierre-pe%C3%B1a-6672572b6/" alt="linkedIn" target="_blank">linkedIn</a>
+    </div>   
   </footer>
 
   <script src="./index.js"></script>
